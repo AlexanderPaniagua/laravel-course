@@ -1,0 +1,25 @@
+body {
+	
+}
+.video-image-mask {
+	width: 200px;
+	height: 150px;
+	overflow: hidden;
+}
+
+#video-list .card-body {
+	padding-left: 0px;
+}
+
+.video-image-mask .video-image {
+	width: 100%;
+}
+
+.video-title {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.video-title a {
+	color: #444;
+}

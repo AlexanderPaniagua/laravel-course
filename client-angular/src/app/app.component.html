@@ -1,0 +1,52 @@
+<header id="header">
+  <div class="navbar navbar-default">
+    <div class="navbar-header">
+      <a class="navbar-brand">
+      CONCESIONARIO
+    </a>
+    </div>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="nav navbar-nav">
+        <li>
+          <a [routerLink]="['']">Inicio</a>
+        </li>
+        <li *ngIf="identity">
+          <a>Crear coche</a>
+        </li>
+      </ul>
+      
+      <ul class="nav navbar-nav navbar-right" *ngIf="!identity">
+        <li>
+          <a [routerLink]="['login']">Identificate</a>
+        </li>
+        <li>
+          <a [routerLink]="['registro']">Registro</a>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right" *ngIf="identity">
+        <li>
+          <a href="#">{{ identity.name + ' ' + identity.surname }}</a>
+        </li>
+        <li>
+          <a [routerLink]="['logout', 1]">
+            <span class="glyphicon glyphicon-log-out"></span>
+          Salir</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</header>
+
+
+<!--
+<login></login>
+<register></register>
+-->
+
+
+<!--
+PAra que se cargue los compo que deben cargarse en el momento concreto utilizar la etiqueta router-outlet. Se cargaran los componentes asociados a la ruta que estoy cargando en el navefador en ese momento
+-->
+<router-outlet></router-outlet>
